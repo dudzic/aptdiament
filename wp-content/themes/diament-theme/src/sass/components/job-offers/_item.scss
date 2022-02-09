@@ -1,0 +1,53 @@
+.job-offers-item {
+    color: $white;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $white;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 1.65rem;
+    }
+
+    p {
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+        line-height: 165%;
+    }
+
+    a {
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.job-offers-item__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.job-offers-item__specification {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+
+        i {
+            display: block;
+            color: $gold;
+            margin-right: 14px;
+            font-size: 1.4rem;
+            width: 20px;
+        }
+    }
+}

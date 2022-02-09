@@ -1,0 +1,34 @@
+.frontpage-send-cv {
+    position: relative;
+    background-color: $dark;
+    padding: 80px 0;
+    color: $white;
+    overflow: hidden;
+
+    > div {
+        text-align: center;
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.953rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.frontpage-send-cv__image {
+    margin: 0 auto 40px;
+    width: 80px;
+
+    @include breakpoint("small") {
+        width: 120px;
+        margin-bottom: 80px;
+    }
+}

@@ -1,0 +1,93 @@
+.frontpage-job-offers {
+    padding: 60px 0;
+    background-color: $pale-dark;
+    color: $white;
+
+    .swiper-pagination {
+        position: relative;
+        margin-top: 60px;
+    }
+}
+
+.frontpage-job-offers-header {
+    h2 {
+        font-size: 2.441rem;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+}
+
+.frontpage-job-offerts-pagination__bullet {
+    background-color: $white;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+
+    &--active {
+        background-color: $gold;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.frontpage-job-offers-slider-navigation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    z-index: 50;
+
+    > div {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+}
+
+.frontpage-job-offers-item {
+    padding: 32px 24px;
+    background-color: $dark;
+    border-radius: 6px;
+
+    h3 {
+        margin-top: 0;
+        font-size: 1.563rem;
+    }
+
+    i {
+        margin-right: 10px;
+        color: $gold;
+    }
+
+    a {
+        margin-top: 40px;
+        &:hover {
+            color: $gold;
+        }
+    }
+}
+
+.frontpage-job-offers-not-found {
+    p {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}

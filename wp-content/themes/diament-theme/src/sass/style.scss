@@ -1,0 +1,40 @@
+// Essentials
+@import "./variables";
+@import "./breakpoints";
+@import "./container";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.paragraph {
+    line-height: 165%;
+}
+
+// Imports
+@import "./components/main-nav";
+@import "./components/main-footer";
+@import "./components/btn";
+@import "./components/popup-send-cv";
+@import "./components/section-newsletter";
+
+// Pages
+@import "./components/frontpage/frontpage";
+@import "./components/about-us/about-us";
+@import "./components/job-offers/job-offers";
+@import "./404";

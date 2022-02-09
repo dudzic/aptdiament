@@ -1,0 +1,12 @@
+.job-offer-wrapper {
+    background-color: $dark;
+
+    @include breakpoint("small") {
+        padding: 0;
+    }
+
+    // @include breakpoint("medium") {
+    //     display: grid;
+    //     grid-template-columns: 320px auto;
+    // }
+}

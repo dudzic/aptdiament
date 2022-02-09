@@ -1,0 +1,35 @@
+{
+    "name": "aptdiament",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "predev": "rimraf ./dist & npm run build:tailwind",
+        "dev": "parcel ./src/js/**/*.js --out-dir ./dist",
+        "postdev": "npm run build:tailwind",
+        "prebuild": "rimraf ./dist",
+        "build": "parcel build ./src/js/**/*.js --out-dir ./dist",
+        "postbuild": "npm run build:tailwind",
+        "build:tailwind": "npx tailwindcss-cli build -i src/css/tailwind.css -o ./dist/tailwind.css",
+        "browser:watch": "browser-sync --watch **/*.html",
+        "compress:images": "npx @squoosh/cli --webp auto images/frontpage/header_background.jpg",
+        "start": "concurrently \"npm:dev\" \"npm:browser:watch\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.27.5",
+        "concurrently": "^6.2.0",
+        "parcel-bundler": "^1.12.5",
+        "rimraf": "^2.7.1",
+        "sass": "^1.35.2"
+    },
+    "dependencies": {
+        "gsap": "^3.7.1",
+        "locomotive-scroll": "^4.1.1",
+        "macy": "^2.5.1",
+        "normalize.css": "^8.0.1",
+        "swiper": "^6.8.1"
+    }
+}

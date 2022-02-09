@@ -1,0 +1,33 @@
+@mixin container() {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint("small") {
+        width: 750px;
+    }
+
+    @include breakpoint("medium") {
+        width: 970px;
+    }
+
+    @include breakpoint("large") {
+        width: 1170px;
+    }
+}
+
+@mixin container--fluid() {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    @include container();
+}
+
+.container--fluid {
+    @include container--fluid();
+}

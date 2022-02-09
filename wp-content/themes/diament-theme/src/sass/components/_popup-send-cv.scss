@@ -1,0 +1,132 @@
+.popup-send-cv {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-send-cv-heading {
+    h5 {
+        font-size: 1.563rem;
+        margin: 0 0 15px;
+        line-height: 145%;
+    }
+
+    h6 {
+        font-size: 1.25rem;
+        line-height: 145%;
+        margin: 0 0 25px;
+    }
+}
+
+.popup-send-cv-container {
+    position: relative;
+    background-color: $white;
+    width: 300px;
+    padding: 40px;
+
+    @include breakpoint("small") {
+        width: 480px;
+    }
+
+    @include breakpoint("medium") {
+        width: 600px;
+    }
+}
+
+.popup-send-cv__form {
+    > div {
+        margin-bottom: 20px;
+
+        label {
+            width: 100%;
+
+            p {
+                display: none;
+
+                &.is_visible {
+                    display: block;
+                }
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                width: 100%;
+                padding: 8px;
+                font-size: 0.9rem;
+                border-radius: 6px;
+                border: 1px solid $pale-dark;
+
+                &.field-error {
+                    border: 1px solid rgb(175, 24, 24);
+                }
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.popup-send-cv-file {
+    background-color: $pale-dark;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+
+    p {
+        margin-top: 0;
+    }
+
+    input {
+        cursor: pointer;
+    }
+}
+
+.cv_privacy-agreement-container {
+    line-height: 165%;
+}
+
+.popup-send-cv-submit {
+    transition: all 0.3s ease-out;
+
+    &:disabled {
+        color: $white;
+        background-color: $pale-dark;
+        cursor: not-allowed;
+    }
+}
+
+.js-close-popup-send-cv {
+    position: absolute;
+    top: -26px;
+    right: -26px;
+    background-color: $white;
+    box-shadow: 0 0 15px $dark;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+    &:hover {
+        background-color: $gold;
+        color: $white;
+    }
+
+    i {
+        font-size: 1.4rem;
+    }
+}
